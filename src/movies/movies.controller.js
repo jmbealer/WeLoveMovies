@@ -1,6 +1,7 @@
 const service = require("./movies.service");
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
 
+// handler to get all movies
 async function list(req, res, next) {
   const { is_showing } = req.query
   if (is_showing) {
@@ -9,10 +10,12 @@ async function list(req, res, next) {
   res.json({ data: await service.list() });
 };
 
+// handler to get 1 movie
 async function read(req, res, next) {
   res.json({ data: res.locals.movie });
 };
 
+// handler for movie theaters
 async function listMovieTheaters(req, res, next) {
   const movieId = req.params.movieId;
   res.json({ data: await service.listMovieTheaters(movieId) });

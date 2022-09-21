@@ -1,5 +1,5 @@
 const knex = require("../db/connection");
-const mapProperties = require("../utils/map-properties")
+// const mapProperties = require("../utils/map-properties")
 
 function addCritic(movies) {
   return movies.map((movie) => {
@@ -23,6 +23,7 @@ function addCritic(movies) {
   })
 }
 
+// lists all movies
 function list() {
   return knex("movies").select("*").groupBy("movies.movie_id");
 }

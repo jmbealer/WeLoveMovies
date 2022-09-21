@@ -1,1 +1,25 @@
 * WeLoveMovies
+
+** Description
+
+This is back-end project to show case:
++ Setting up a database
++ Building out specific routes so users access data about:
+  + Movies
+  + Theaters
+  + Reviews
+
+** Tech Stack
+
++ Express
++ Postgre
++ KNEX
+
+
+** Learning Objectives
+
++ Create Tables
++ Run latest migration
++ Run Seeds
++ Create Services / Controller / Routes
++ Error Handlling
